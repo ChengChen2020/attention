@@ -1,4 +1,4 @@
-# Attention Is All You Need
+# "Attention Is All You Need"
 
 Implementation reorganized from [d2l](https://d2l.ai/_modules/d2l/torch.html)
 
@@ -7,19 +7,19 @@ Implementation reorganized from [d2l](https://d2l.ai/_modules/d2l/torch.html)
 <details>
   <summary>[Click to expand]</summary>
 
-- Transformer
-	- TransformerEncoder
+- Transformer (**transformer.py**)
+	- TransformerEncoder (**transformer.py**)
+		- Embedding
+		- PositionalEncoding (**embeddings.py**)
+		- EncoderBlock (Nx) (**layers.py**)
+			- MultiHeadAttention (Self) (**sublayers.py**)
+			- Add & Norm (**sublayers.py**)
+			- PositionWiseFFN (**sublayers.py**)
+			- Add & Norm
+	- TransformerDecoder (**transformer.py**)
 		- Embedding
 		- PositionalEncoding
-		- EncoderBlock (N$\times$)
-			- MultiHeadAttention (Self)
-			- Add & Norm
-			- PositionWiseFFN
-			- Add & Norm
-	- TransformerDecoder
-		- Embedding
-		- PositionalEncoding
-		- DecoderBlock (N$\times$)
+		- DecoderBlock (Nx) (**layers.py**)
 			- MultiHeadAttention (Self)
 			- Add & Norm
 			- MultiHeadAttention (Encoder-Decoder)
