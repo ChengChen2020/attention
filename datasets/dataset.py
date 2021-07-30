@@ -11,6 +11,7 @@ import torch.utils.data as data
 from lib.utils import truncate_pad
 
 DATA_URL = 'http://d2l-data.s3-accelerate.amazonaws.com/'
+
 reduce_sum = lambda x, *args, **kwargs: x.sum(*args, **kwargs)
 astype = lambda x, *args, **kwargs: x.type(*args, **kwargs)
 
